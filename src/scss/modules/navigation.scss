@@ -1,5 +1,5 @@
 .navigation {
-    background: #1d9627;
+    background: var(--navBackground);
     padding: 16px;
     border-radius: 8px;
     &__link {
@@ -38,9 +38,9 @@
   }
 }
 
-.checkbox:checked + .switch::after {
+.navigation__checkbox:checked + .switch::after {
   left : 20px;
 }
-.checkbox:checked + .switch {
+.navigation__checkbox:checked + .switch {
   background-color: #7983ff;
 }

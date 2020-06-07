@@ -1,19 +1,25 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
 
 @import "modules/week-summary.scss";
 @import "modules/navigation.scss";
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
+:root {
+  --backgroud:  #92ce92;
+  --navBackground: #1d9627;
+  --color: #333;
+  --mainHeaderColor: #7d1d3f;
+}
 
 main{
   margin: 20px;
   }
   
   body {
-    background: #92ce92;
-    color: #333;
+    background: var(--backgroud);
+    color: var(--color);
     font-family: Montserrat;
     min-height: 100vh;
   }
@@ -34,6 +40,8 @@ main{
     grid-area: aside;
     text-align: justify;
     text-justify: inter-word;
+    font-size: large;
+    line-height: normal;
   }
   
   .aside {
@@ -83,7 +91,7 @@ main{
   }
   
   .main-heading {
-    color: #7d1d3f;
+    color: var(--mainHeaderColor);
     grid-area: main-heading;
     display: flex;
     align-items: center;
