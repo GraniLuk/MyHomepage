@@ -3,11 +3,104 @@
 @import "_variables";
 @import "modules/hello.scss";
 
-body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+@import "modules/week-summary.scss";
+@import "modules/navigation.scss";
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
+main{
+  margin: 20px;
+  }
+  
+  body {
+    background: #92ce92;
+    color: #333;
+    font-family: Montserrat;
+    min-height: 100vh;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 100px 2fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    &__element {
+    background: tomato;
+    padding: 20px;
+    color: #fff
+    }
+  }
+
+  .welcomeNote {
+    grid-area: aside;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  .aside {
+    grid-area: article;
+  }
+  
+  .footer {
+    grid-area: footer;
+    position: absolute;
+    bottom: 5px;
+  }
+  
+  .box-model-img {
+    width: fit-content;
+  }
+
+  
+  .smallCode{
+    text-align: center;
+    &__text{
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 9px 20px;
+      display: inline-block;
+      margin: 5px;
+      letter-spacing: 1px;
+    }
+  }
+  
+  .list {
+    list-style: square;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .welcomePage {
+    display: grid;
+    grid-template-areas: "main-heading main-heading"
+     "article aside"
+     "footer footer";
+     grid-template-columns: 500px 1fr;
+     column-gap: 15px;
+     row-gap: 16px;
+     padding: 0px 80px;
+  }
+  
+  .main-heading {
+    color: #7d1d3f;
+    grid-area: main-heading;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 0px 0px 0px;
+  }
+  
+  .main-heading::before {
+    content: "";
+  }
+
+  .secondary-heading {
+    text-align: center;
+  vertical-align: middle;
+  }
+
+  img.center {
+    display: block;
+    margin: 0 auto;
 }

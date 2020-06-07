@@ -58,10 +58,40 @@ module.exports = {
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/pages/another.html",
+      template: "./src/pages/tydzien3.html",
       inject: true,
-      chunks: ["index", "another"],
-      filename: "another.html",
+      chunks: ["index"],
+      filename: "tydzien3.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/tydzien4.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "tydzien4.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/tydzien5.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "tydzien5.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/tydzien6.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "tydzien6.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/tydzien7.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "tydzien7.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/tydzien8.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "tydzien8.html",
+    })
   ],
 };
