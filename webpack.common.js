@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   /* here you can define another js file */
@@ -11,6 +13,12 @@ module.exports = {
     filename: "[name].[hash:8].js",
     path: __dirname + "/dist",
     publicPath: '/', // Explicitly set publicPath
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin(),
+      new CssMinimizerPlugin(),
+    ],
   },
   module: {
     rules: [
