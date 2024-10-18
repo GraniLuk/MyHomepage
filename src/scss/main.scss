@@ -1,9 +1,10 @@
+@use "sass:meta";
 @import "~normalize.css";
 
-@import "_variables";
+@include meta.load-css("_variables");
 
-@import "modules/week-summary.scss";
-@import "modules/navigation.scss";
+@include meta.load-css("modules/week-summary.scss");
+@include meta.load-css("modules/navigation.scss");
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
 
 :root {
