@@ -10,6 +10,7 @@ module.exports = {
   output: {
     filename: "[name].[hash:8].js",
     path: __dirname + "/dist",
+    publicPath: '/', // Explicitly set publicPath
   },
   module: {
     rules: [
@@ -56,42 +57,49 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "index.html",
+      publicPath: '/', // Ensures that your assets are served from the root URL
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien3.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien3.html",
+      publicPath: '/', // Ensures that your assets are served from the root URL
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien4.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien4.html",
+      publicPath: '/', // Ensures that your assets are served from the root URL
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien5.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien5.html",
+      publicPath: '/', // Ensures that your assets are served from the root URL
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien6.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien6.html",
+      publicPath: '/', // Ensures that your assets are served from the root URL
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien7.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien7.html",
+      publicPath: '/', // Ensures that your assets are served from the root URL
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien8.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien8.html",
+      publicPath: '/', // Ensures that your assets are served from the root URL
     })
   ],
 };
