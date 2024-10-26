@@ -37,15 +37,23 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "img/[name].[hash:8].[ext]",
-            },
-          },
+          'style-loader',
+          'css-loader',
+          'sass-loader',
         ],
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
@@ -62,10 +70,7 @@ module.exports = {
     /* here you can define another html file and its dependencies */
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
-      inject: true,
-      chunks: ["index"],
       filename: "index.html",
-      publicPath: '/', // Ensures that your assets are served from the root URL
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien3.html",

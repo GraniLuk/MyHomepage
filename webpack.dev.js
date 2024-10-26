@@ -1,50 +1,15 @@
-const merge = require("webpack-merge");
-const common = require("./webpack.common.js");
 const path = require('path');
+const common = require("./webpack.common.js");
+const { merge } = require('webpack-merge');
 
 module.exports = merge(common, {
   devtool: "source-map",
   mode: "development",
 
-  module: {
-    rules: [
-      {
-        test: /\.s[ac]ss$/i,
-        use: [ // Change 'loader' to 'use'
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.css$/i,
-        use: [ // Change 'loader' to 'use'
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-    ],
-  },
-
   devServer: {
     port: 8080,
     static: {
-      directory: path.join(__dirname, 'public'), // Adjust as needed
+      directory: path.join(__dirname, 'src'),
     },
     historyApiFallback: true, // Optional, if using React Router or similar
     hot: true, // Enables Hot Module Replacement
