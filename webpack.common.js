@@ -77,42 +77,57 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "tydzien3.html",
-      publicPath: '/', // Ensures that your assets are served from the root URL
+      publicPath: '/',
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien4.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien4.html",
-      publicPath: '/', // Ensures that your assets are served from the root URL
+      publicPath: '/',
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien5.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien5.html",
-      publicPath: '/', // Ensures that your assets are served from the root URL
+      publicPath: '/',
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien6.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien6.html",
-      publicPath: '/', // Ensures that your assets are served from the root URL
+      publicPath: '/',
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien7.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien7.html",
-      publicPath: '/', // Ensures that your assets are served from the root URL
+      publicPath: '/',
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien8.html",
       inject: true,
       chunks: ["index"],
       filename: "tydzien8.html",
-      publicPath: '/', // Ensures that your assets are served from the root URL
+      publicPath: '/',
+    }),
+    // Add the new Geeks Club pages
+    new HtmlWebpackPlugin({
+      template: "./src/pages/geeks-club-week1.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "geeks-club-week1.html",
+      publicPath: '/',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/geeks-club-week2.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "geeks-club-week2.html",
+      publicPath: '/',
     })
   ],
 };

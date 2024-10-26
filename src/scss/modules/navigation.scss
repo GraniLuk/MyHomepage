@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .navigation {
     background: var(--navBackground);
     padding: 16px;
@@ -13,12 +15,46 @@
       color: #fff;
       display: inline-block;
       margin-right: 20px;
+      text-decoration: none;
       &--homepage {
         color: #000;
       }
     }
     &__checkbox {
       display: none;
+    }
+
+    &__dropdown {
+      display: inline-block;
+      position: relative;
+
+      &-toggle {
+        cursor: pointer;
+      }
+
+      &-content {
+        display: none;
+        position: absolute;
+        background-color: var(--navBackground);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+
+        a {
+          color: #fff;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+
+          &:hover {
+            background-color: color.scale(#1d9627, $lightness: -10%);
+          }
+        }
+      }
+
+      &:hover .navigation__dropdown-content {
+        display: block;
+      }
     }
 }
 
