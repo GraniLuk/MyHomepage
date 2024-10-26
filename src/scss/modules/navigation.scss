@@ -1,18 +1,25 @@
 .navigation {
     background: var(--navBackground);
     padding: 16px;
-    border-radius: 8px;
+    // Remove the border-radius
+    // border-radius: 8px;
+    
+    // Add these properties to make it full width
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    
     &__link {
       color: #fff;
       display: inline-block;
       margin-right: 20px;
       &--homepage {
         color: #000;
+      }
     }
-  }
-   &__checkbox{
-      display : none;
-   }
+    &__checkbox {
+      display: none;
+    }
 }
 
  
