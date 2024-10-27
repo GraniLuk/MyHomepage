@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const path = require('path');
 
 module.exports = {
   /* here you can define another js file */
@@ -33,8 +34,25 @@ module.exports = {
         },
       },
       {
-        test: /\.html$/i,
-        loader: "html-loader",
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              sources: false,
+              preprocessor: (content, loaderContext) => {
+                let result = content.replace(
+                  /\$\{require\(['"]\.\.\/partials\/(.+)['"]\)\}/g,
+                  (match, fileName) => {
+                    const filePath = path.resolve(__dirname, 'src', 'partials', fileName);
+                    return loaderContext.fs.readFileSync(filePath, 'utf8');
+                  }
+                );
+                return result;
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.s[ac]ss$/i,
@@ -71,6 +89,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       filename: "index.html",
+      inject: true
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/tydzien3.html",
