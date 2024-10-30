@@ -5,20 +5,44 @@ const { merge } = require('webpack-merge');
 module.exports = merge(common, {
   devtool: "inline-source-map",
   mode: "development",
-
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader", // Injects CSS into the DOM
+          {
+            loader: "css-loader",
+            options: {
+              url: true,
+            }
+          },
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+        ],
+      },
+    ],
+  },
   devServer: {
     port: 8080,
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    historyApiFallback: true, // Optional, if using React Router or similar
-    hot: true, // Enables Hot Module Replacement
+    historyApiFallback: true,
+    hot: true,
     open: true,
     devMiddleware: {
-      writeToDisk: true,  // This will write files to disk in dev mode
+      writeToDisk: true,
     },
   },
   output: {
-    publicPath: '/',  // This is important for dev server
+    publicPath: '/',
   },
 });
