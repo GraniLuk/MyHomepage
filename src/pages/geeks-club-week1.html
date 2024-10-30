@@ -8,22 +8,61 @@
       ${require('../partials/navigation.html')}
     </header>
     <main>
-      <h1>Geeks Club - Podsumowanie Tygodnia 1</h1>
-      <article>
-        <h2>Temat: Wprowadzenie do HTML5 i CSS3</h2>
-        <p>W tym tygodniu omówiliśmy podstawy HTML5 i CSS3. Oto główne punkty:</p>
+      <h1 class="main-heading">Geeks Club - Podsumowanie Tygodnia 1</h1>
+      <article class="article">
+        <h2>Summary - Organize Your Breakpoints like a pro</h2>
+        <p>
+          <a href="https://devblogs.microsoft.com/visualstudio/organize-your-breakpoints-like-a-pro/">Artykuł</a> 
+          omawia nową funkcję w Visual Studio 2022, która usprawnia zarządzanie punktami przerwania poprzez grupy breakpointów.
+        </p>
+        
+        <h3>Kluczowe funkcje:</h3>
         <ul>
-          <li>Struktura dokumentu HTML5</li>
-          <li>Nowe semantyczne tagi HTML5</li>
-          <li>Podstawy selektorów CSS</li>
-          <li>Model pudełkowy w CSS</li>
-          <li>Responsywny design z użyciem media queries</li>
+          <li>Tworzenie i zarządzanie grupami breakpointów: Użytkownicy mogą tworzyć grupy breakpointów poprzez kliknięcie prawym przyciskiem myszy na breakpoint w oknie Breakpoints i wybranie "Add to Group -> New Group".</li>
+          <li>Grupy można nazwać i opisać dla wersji 2.</li>
+          <li>Zarządzanie grupami: Możliwość włączania lub wyłączania wszystkich breakpointów w grupie, ustawiania warunków i tworzenia zależności między grupami.</li>
+          <li>Domyślna funkcjonalność grupy: Oznaczając grupę jako domyślną, wszystkie nowo dodane breakpointy będą automatycznie należeć do tej grupy.</li>
+          <li>Elastyczność: Użytkownicy mogą łatwo przenosić breakpointy między grupami lub zmieniać grupę domyślną w miarę rozwoju projektu.</li>
         </ul>
-        <p>Projekt tygodnia: Stworzenie prostej, responsywnej strony portfolio.</p>
+
+        <h3>Przykład użycia z naszego rozwiązania:</h3>
+        <p>
+          <img src="../assets/img/breakpointGroup.jpeg" alt="Breakpoint Groups">
+          <a href="https://devblogs.microsoft.com/visualstudio/bringing-code-cleanup-on-save-to-visual-studio-2022-17-1-preview-2/">Code Cleanup on Save</a>
+        </p>
+        <p>
+          Było bardzo frustrujące uzyskanie nieudanej kompilacji z powodu niepotrzebnych using, ponieważ musieliśmy uruchomić ponownie kompilację, aby uzyskać wynik kompilacji. Następnie usunąć usings i uruchomić ponownie, więc uzyskamy wyniki testów w 0.5h później niż oczekiwano.
+        </p>
+        <p>
+          <img src="../assets/img/pipeline.jpeg" alt="Solution Example">
+        </p>
+        <p>
+          Teraz mamy rozwiązanie tego problemu!
+        </p>
+        <p>
+          <img src="../assets/img/cleanupOnSave.jpeg" alt="Problem Solution">
+        </p>
+        <p>
+          W konfiguracji czyszczenia kodu musimy dodać usuwanie niepotrzebnych importów lub using, wtedy zostaną one usunięte przy zapisie.
+        </p>
+
+        <h3>Azure Poor Formatter</h3>
+        <p>
+          <a href="https://github.com/wsr-publishing/azure-poor-formatter">Azure Poor Formatter</a> to rozszerzenie Visual Studio Code zaprojektowane do formatowania kodu T-SQL w Azure Data Studio. Wykorzystuje parser Man's T-SQL Formatter do poprawy czytelności i organizacji kodu SQL.
+        </p>
+
+        <h4>Główne funkcje:</h4>
+        <ul>
+          <li>Opcje formatowania: Użytkownicy mogą wybrać "pretty", "beautify" lub obfuskować swój kod T-SQL.</li>
+          <li>Ustawienia niestandardowe: Rozszerzenie oferuje różne ustawienia pozwalające użytkownikom dostosować proces formatowania.</li>
+          <li>Opcje wcięć: Możliwość wyboru wcięć opartych na tabulatorach lub spacji.</li>
+          <li>Szerokość linii: Ustawienie maksymalnej liczby znaków na linię.</li>
+          <li>Kontrola podziału linii: Kontrola nad podziałami między elementami i klauzulami.</li>
+          <li>Obsługa komentarzy: Opcje rozwijania list oddzielonych przecinkami na nowe linie i zarządzania wyrażeniami logicznymi.</li>
+          <li>Wyrażenia logiczne i instrukcje CASE: Dostosowanie sposobu formatowania wyrażeń logicznych i instrukcji CASE.</li>
+          <li>Słowa kluczowe: Funkcje zmiany wielkości liter słów kluczowych i standaryzacji mniej używanych słów kluczowych.</li>
+        </ul>
       </article>
     </main>
-    <footer class="footer">
-      Strona domowa Łukasza Granicy - Geeks Club
-    </footer>
   </body>
 </html>
