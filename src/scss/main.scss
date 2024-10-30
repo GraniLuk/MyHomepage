@@ -1,10 +1,9 @@
 @use "sass:meta";
-@import "~normalize.css";
 
-@import "_variables";
-@import "modules/week-summary";
-@import "modules/navigation";
-@import "modules/geeks-club";
+@use "./_variables" as *;
+@use "./modules/week-summary";
+@use "./modules/navigation";
+@use "./modules/geeks-club";
 
 :root {
   --backgroud:  #ffffff;

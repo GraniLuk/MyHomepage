@@ -1,4 +1,5 @@
 import '../scss/main.scss';
+import 'normalize.css';
 
 import moment from 'moment';
 
