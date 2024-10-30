@@ -13,7 +13,7 @@ module.exports = {
   output: {
     filename: "[name].[hash:8].js",
     path: __dirname + "/dist",
-    publicPath: '/', // Explicitly set publicPath
+    publicPath: './', // Change this from '/' to './'
   },
   optimization: {
     minimizer: [
@@ -72,6 +72,9 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/img/[name][ext]'
+        }
       },
     ],
   },
@@ -82,7 +85,12 @@ module.exports = {
 
   plugins: [
     new CopyWebpackPlugin({
-      patterns: [{ from: "public" }],
+      patterns: [
+        { 
+          from: "src/assets", 
+          to: "assets" 
+        }
+      ],
     }),
 
     /* here you can define another html file and its dependencies */
