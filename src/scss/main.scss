@@ -9,9 +9,11 @@
 
 :root {
   --backgroud:  #ffffff;
-  --navBackground: #ffffff;
+  --navBackground: #665b5b;
   --color: #333;
   --mainHeaderColor: #7d1d3f;
+  --primary-font: 'Roboto', sans-serif;
+  --heading-font: 'Montserrat', sans-serif;
 }
 
 main{
@@ -21,7 +23,7 @@ main{
   body {
     background: var(--backgroud);
     color: var(--color);
-    font-family: Montserrat;
+    font-family: var(--primary-font);
     min-height: 100vh;
     margin: 0;
   }
@@ -93,6 +95,7 @@ main{
   }
   
   .main-heading {
+    font-family: var(--heading-font);
     color: var(--mainHeaderColor);
     grid-area: main-heading;
     display: flex;

@@ -1,30 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geeks Club - Tydzień 1</title>
+    ${require('../partials/head.html')}
   </head>
   <body>
     <header>
-      <nav class="navigation">
-        <a class="navigation__link navigation__link--homepage" href="index.html">Strona główna</a>
-        <div class="navigation__dropdown">
-          <a class="navigation__link navigation__dropdown-toggle" href="#">Geeks Club</a>
-          <div class="navigation__dropdown-content">
-            <a class="navigation__link" href="geeks-club-week1.html">Tydzień 1</a>
-            <a class="navigation__link" href="geeks-club-week2.html">Tydzień 2</a>
-          </div>
-        </div>
-        <a class="navigation__link" href="tydzien3.html">Tydzień 3</a>
-        <a class="navigation__link" href="tydzien4.html">Tydzień 4</a>
-        <a class="navigation__link" href="tydzien5.html">Tydzień 5</a>
-        <a class="navigation__link" href="tydzien6.html">Tydzień 6</a>
-        <a class="navigation__link" href="tydzien7.html">Tydzień 7</a>
-        <a class="navigation__link" href="tydzien8.html">Tydzień 8</a>
-        <input type="checkbox" id="toggle" class="navigation__checkbox darkmode--js" />  
-        <label for="toggle" class="switch"></label>
-      </nav>
+      ${require('../partials/navigation.html')}
     </header>
     <main>
       <h1>Geeks Club - Podsumowanie Tygodnia 1</h1>
