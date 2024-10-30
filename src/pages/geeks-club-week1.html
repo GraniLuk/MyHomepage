@@ -8,59 +8,60 @@
       ${require('../partials/navigation.html')}
     </header>
     <main>
-      <h1 class="main-heading">Geeks Club - Podsumowanie Tygodnia 1</h1>
+      <h1 class="main-heading">Geeks Club - Summary</h1>
       <article class="article">
-        <h2>Summary - Organize Your Breakpoints like a pro</h2>
+        <h2><a href="https://devblogs.microsoft.com/visualstudio/organize-your-breakpoints-like-a-pro/">Organize Your Breakpoints like a pro</a></h2>
         <p>
-          <a href="https://devblogs.microsoft.com/visualstudio/organize-your-breakpoints-like-a-pro/">Artykuł</a> 
-          omawia nową funkcję w Visual Studio 2022, która usprawnia zarządzanie punktami przerwania poprzez grupy breakpointów.
+          The article discusses a new feature in Visual Studio 2022 that enhances the management of breakpoints through breakpoint groups. This feature allows users to create custom collections of breakpoints, enabling easier organization and control during debugging.
         </p>
         
-        <h3>Kluczowe funkcje:</h3>
+        <h3>Key features:</h3>
         <ul>
-          <li>Tworzenie i zarządzanie grupami breakpointów: Użytkownicy mogą tworzyć grupy breakpointów poprzez kliknięcie prawym przyciskiem myszy na breakpoint w oknie Breakpoints i wybranie "Add to Group -> New Group".</li>
-          <li>Grupy można nazwać i opisać dla wersji 2.</li>
-          <li>Zarządzanie grupami: Możliwość włączania lub wyłączania wszystkich breakpointów w grupie, ustawiania warunków i tworzenia zależności między grupami.</li>
-          <li>Domyślna funkcjonalność grupy: Oznaczając grupę jako domyślną, wszystkie nowo dodane breakpointy będą automatycznie należeć do tej grupy.</li>
-          <li>Elastyczność: Użytkownicy mogą łatwo przenosić breakpointy między grupami lub zmieniać grupę domyślną w miarę rozwoju projektu.</li>
+          <li>Creation and Management: Users can create a breakpoint group by right-clicking on a breakpoint in the Breakpoints window and selecting "Add to Group > New Group." Groups can be named and described for clarity</li>
+          <li>Actions on Groups: You can enable or disable all breakpoints in a group, set conditions, and make groups dependent on other breakpoints</li>
+          <li>Default Group Functionality: By marking a group as the default, any new breakpoints added will automatically belong to that group</li>
+          <li>Flexibility: Users can easily move breakpoints between groups or change the default group as project needs evolve.</li>
         </ul>
 
-        <h3>Przykład użycia z naszego rozwiązania:</h3>
+        <h3>Example of usage:</h3>
         <p>
           <img src="../assets/img/breakpointGroup.jpeg" alt="Breakpoint Groups">
-          <a href="https://devblogs.microsoft.com/visualstudio/bringing-code-cleanup-on-save-to-visual-studio-2022-17-1-preview-2/">Code Cleanup on Save</a>
+          <h2><a href="https://devblogs.microsoft.com/visualstudio/bringing-code-cleanup-on-save-to-visual-studio-2022-17-1-preview-2/">Code Cleanup on Save</a></h2>
         </p>
         <p>
-          Było bardzo frustrujące uzyskanie nieudanej kompilacji z powodu niepotrzebnych using, ponieważ musieliśmy uruchomić ponownie kompilację, aby uzyskać wynik kompilacji. Następnie usunąć usings i uruchomić ponownie, więc uzyskamy wyniki testów w 0.5h później niż oczekiwano.
+          It had been very frustrating to get failed build, because of unnecessary usings, since we needed to wait 10min to get result that build failed. Then remove usings and run again, so we will get tests results in 0.5h later than expected.
         </p>
         <p>
-          <img src="../assets/img/pipeline.jpeg" alt="Solution Example">
+          <img src="../assets/img/pipeline.jpeg" alt="Pipeline">
         </p>
         <p>
-          Teraz mamy rozwiązanie tego problemu!
+          Now we have solution for this problem!
         </p>
         <p>
-          <img src="../assets/img/cleanupOnSave.jpeg" alt="Problem Solution">
+          <img src="../assets/img/cleanupOnSave.jpeg" alt="Code Cleanup">
         </p>
         <p>
-          W konfiguracji czyszczenia kodu musimy dodać usuwanie niepotrzebnych importów lub using, wtedy zostaną one usunięte przy zapisie.
+          And in code cleanup configuration we need to add Remove unnecessary imports or usings, then it will be deleted after save
+        </p>
+        <p></p>
+          <img src="../assets/img/RemoveUsings.jpeg" alt="Remove usings">
         </p>
 
-        <h3>Azure Poor Formatter</h3>
+        <h2><a href="https://github.com/wsr-publishing/azure-poor-formatter">Azure Poor Formatter</a></h2>
         <p>
-          <a href="https://github.com/wsr-publishing/azure-poor-formatter">Azure Poor Formatter</a> to rozszerzenie Visual Studio Code zaprojektowane do formatowania kodu T-SQL w Azure Data Studio. Wykorzystuje parser Man's T-SQL Formatter do poprawy czytelności i organizacji kodu SQL.
+          The Azure Poor Formatter is a Visual Studio Code extension designed to format T-SQL code within Azure Data Studio. It utilizes the Poor Man's T-SQL Formatter to enhance the readability and organization of SQL scripts.
         </p>
 
-        <h4>Główne funkcje:</h4>
+        <h4>Key features:</h4>
         <ul>
-          <li>Opcje formatowania: Użytkownicy mogą wybrać "pretty", "beautify" lub obfuskować swój kod T-SQL.</li>
-          <li>Ustawienia niestandardowe: Rozszerzenie oferuje różne ustawienia pozwalające użytkownikom dostosować proces formatowania.</li>
-          <li>Opcje wcięć: Możliwość wyboru wcięć opartych na tabulatorach lub spacji.</li>
-          <li>Szerokość linii: Ustawienie maksymalnej liczby znaków na linię.</li>
-          <li>Kontrola podziału linii: Kontrola nad podziałami między elementami i klauzulami.</li>
-          <li>Obsługa komentarzy: Opcje rozwijania list oddzielonych przecinkami na nowe linie i zarządzania wyrażeniami logicznymi.</li>
-          <li>Wyrażenia logiczne i instrukcje CASE: Dostosowanie sposobu formatowania wyrażeń logicznych i instrukcji CASE.</li>
-          <li>Słowa kluczowe: Funkcje zmiany wielkości liter słów kluczowych i standaryzacji mniej używanych słów kluczowych.</li>
+          <li>Formatting Options: Users can choose to "prettify," "beautify," or obfuscate their T-SQL code.</li>
+          <li>Customization Settings: The extension offers various settings that allow users to customize the formatting process</li>
+          <li>Indentation Options: Options for tab or space-based indentation</li>
+          <li>Width: Set maximum characters per line</li>
+          <li>Statement and Clause Breaks: Control over line breaks between statements and clauses.</li>
+          <li>Comma Handling: Options for expanding comma-separated lists onto new lines and managing trailing commas</li>
+          <li>Boolean and Case Statements: Customization for how boolean expressions and CASE statements are formatted</li>
+          <li>Keyword Management: Features for uppercasing keywords and standardizing less common keywords.</li>
         </ul>
       </article>
     </main>
