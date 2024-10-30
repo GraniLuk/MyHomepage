@@ -4,11 +4,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
+const path = require("path");
 
 module.exports = merge(common, {
   mode: "production",
   output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[contenthash:8].js",
     publicPath: './',
+    clean: true,
   },
   module: {
     rules: [
@@ -40,7 +44,12 @@ module.exports = merge(common, {
       filename: "[name].[contenthash:8].css",
       chunkFilename: "[id].[contenthash:8].css",
     }),
-    new CompressionPlugin(),
+    new CompressionPlugin({
+      algorithm: "gzip",
+      test: /\.(js|css|html|svg)$/,
+      threshold: 10240, // Only compress files > 10kb
+      minRatio: 0.8,
+    }),
   ],
   optimization: {
     minimizer: [
@@ -74,9 +83,10 @@ module.exports = merge(common, {
       },
     },
   },
-  performance: {
-    hints: "warning",
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
+    performance: {
+      hints: "warning",
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000,
+    },
   },
-});
+);
