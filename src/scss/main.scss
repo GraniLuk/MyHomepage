@@ -1,12 +1,10 @@
 @use "sass:meta";
 @import "~normalize.css";
 
-@include meta.load-css("_variables");
-
-@include meta.load-css("modules/week-summary.scss");
-@include meta.load-css("modules/navigation.scss");
-@include meta.load-css("modules/geeks-club.scss");
-@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+@import "_variables";
+@import "modules/week-summary";
+@import "modules/navigation";
+@import "modules/geeks-club";
 
 :root {
   --backgroud:  #ffffff;
