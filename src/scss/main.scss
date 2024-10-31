@@ -12,6 +12,8 @@
   --mainHeaderColor: #7d1d3f;
   --primary-font: 'Roboto', sans-serif;
   --heading-font: 'Montserrat', sans-serif;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
 }
 
 main{
@@ -40,20 +42,36 @@ main{
 
   .welcomeNote {
     grid-area: aside;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: large;
-    line-height: normal;
+    background-color: var(--backgroud);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
   }
   
   .aside {
     grid-area: article;
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      object-fit: cover;
+    }
   }
   
   .footer {
     grid-area: footer;
-    position: absolute;
-    bottom: 5px;
+    text-align: center;
+    padding: 1.5rem;
   }
   
   .box-model-img {
@@ -83,23 +101,42 @@ main{
   
   .welcomePage {
     display: grid;
-    grid-template-areas: "main-heading main-heading"
-     "article aside"
-     "footer footer";
-     grid-template-columns: 500px 1fr;
-     column-gap: 15px;
-     row-gap: 16px;
-     padding: 0px 80px;
+    grid-template-areas: 
+      "main-heading main-heading"
+      "article aside"
+      "footer footer";
+    grid-template-columns: minmax(300px, 500px) 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 0 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 100px);
   }
   
   .main-heading {
     font-family: var(--heading-font);
     color: var(--mainHeaderColor);
     grid-area: main-heading;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 28px 0px 0px 0px;
+    text-align: center;
+    padding: 2rem 0;
+    
+    &--JS {
+      font-size: 2.5rem;
+      position: relative;
+      display: inline-block;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--mainHeaderColor);
+        opacity: 0.7;
+      }
+    }
   }
   
   .main-heading::before {
@@ -108,7 +145,7 @@ main{
 
   .secondary-heading {
     text-align: center;
-  vertical-align: middle;
+    vertical-align: middle;
   }
 
   img.center {
