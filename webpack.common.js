@@ -85,48 +85,6 @@ module.exports = {
       chunks: ["index"],
       inject: true
     }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/tydzien3.html",
-      inject: true,
-      chunks: ["index"],
-      filename: "tydzien3.html",
-      publicPath: './',
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/tydzien4.html",
-      inject: true,
-      chunks: ["index"],
-      filename: "tydzien4.html",
-      publicPath: './',
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/tydzien5.html",
-      inject: true,
-      chunks: ["index"],
-      filename: "tydzien5.html",
-      publicPath: './',
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/tydzien6.html",
-      inject: true,
-      chunks: ["index"],
-      filename: "tydzien6.html",
-      publicPath: './',
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/tydzien7.html",
-      inject: true,
-      chunks: ["index"],
-      filename: "tydzien7.html",
-      publicPath: './',
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/tydzien8.html",
-      inject: true,
-      chunks: ["index"],
-      filename: "tydzien8.html",
-      publicPath: './',
-    }),
     // Add the new Geeks Club pages
     new HtmlWebpackPlugin({
       template: "./src/pages/geeks-club-week1.html",
