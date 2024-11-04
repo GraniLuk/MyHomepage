@@ -99,6 +99,13 @@ module.exports = {
       chunks: ["index"],
       filename: "geeks-club-week2.html",
       publicPath: './',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/breakpointGroups.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "breakpointGroups.html",
+      publicPath: './',
     })
   ],
 };
