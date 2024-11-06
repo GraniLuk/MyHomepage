@@ -106,6 +106,48 @@ module.exports = {
       chunks: ["index"],
       filename: "breakpointGroups.html",
       publicPath: './',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/rider-free.html",
+      filename: "rider-free.html",
+      chunks: ["index"],
+      publicPath: './',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/cursor-review.html",
+      filename: "cursor-review.html",
+      chunks: ["index"],
+      publicPath: './',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/vscode-ai.html",
+      filename: "vscode-ai.html",
+      chunks: ["index"],
+      publicPath: './',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/package-management.html",
+      filename: "package-management.html",
+      chunks: ["index"],
+      publicPath: './',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/nuget-why.html",
+      filename: "nuget-why.html",
+      chunks: ["index"],
+      publicPath: './',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/debugger-return.html",
+      filename: "debugger-return.html",
+      chunks: ["index"],
+      publicPath: './',
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/vs-shortcuts.html",
+      filename: "vs-shortcuts.html",
+      chunks: ["index"],
+      publicPath: './',
     })
   ],
 };

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    ${require('../partials/head.html')}
+  </head>
+  <body>
+    <header>
+      ${require('../partials/navigation.html')}
+    </header>
+    <main>
+      <h1 class="main-heading">Dotnet Nuget Why</h1>
+      <article class="article">
+        <h2><a href="https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-why">Dotnet Nuget Why</a></h2>
+        <p>We had a problem last week to find out why Banqsoft.Services.V21Host.csproj project has reference to IdentityServer4, it wasn't added as direct reference to this project, but it was transient reference. Easiest way to verify it, is dotnet nuget why command:</p>
+        <img src="./assets/img/week202446/nugetwhy.png" alt="dotnet nuget why command output">
+      </article>
+    </main>
+    <footer class="footer">
+      Lukasz Granica's Homepage
+    </footer>
+  </body>
+</html>

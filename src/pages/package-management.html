@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    ${require('../partials/head.html')}
+  </head>
+  <body>
+    <header>
+      ${require('../partials/navigation.html')}
+    </header>
+    <main>
+      <h1 class="main-heading">.NET Upgrade Assistant Now Supports Upgrading to Centralized Package Management</h1>
+      <article class="article">
+        <h2><a href="https://devblogs.microsoft.com/dotnet/dotnet-upgrade-assistant-cpm-upgrade/">.NET Upgrade Assistant Now Supports Upgrading to Centralized Package Management</a></h2>
+        <p>It's now easy to migrate solution to Centralized Package Management using .NET Upgrade Assistant</p>
+        <img src="./assets/img/week202446/directoryPackagesProps.png" alt="screenshot of .NET Upgrade Assistant upgrade type selection UI">
+        <p>After that migration in each csproj there no longer will be version number mention for specific nuget package:</p>
+        <img src="./assets/img/week202446/noMoreVersions.png" alt="screenshot of Git Changes showing version attributes removed from .csproj">
+        <p>All the version numbers will be stored in Directory.packages.props</p>
+        <img src="./assets/img/week202446/directoryPackagesProps.png" alt="screenshot showing version attributes consolidated in Directory.packages.props">
+        <h3>Here’s why that matters:</h3>
+        <ul>
+          <li><strong>Less Hassle, More Control</strong><br>
+              With CPM, you can manage package versions from a single place, which means no more updating versions across individual projects. Just update it in one file, and it applies everywhere—saving time and cutting down on inconsistencies.
+          </li>
+          <li><strong>Easier Dependency Management</strong><br>
+              CPM reduces “dependency hell.” With all your versions centralized, it’s easier to keep dependencies compatible and prevent version conflicts between projects. This streamlines the upgrade process and keeps your codebase clean.
+          </li>
+          <li><strong>Ideal for Large Solutions</strong><br>
+              If you’re working with multi-project solutions, CPM helps you avoid version mismatches across projects. It’s also a huge win for teams, giving everyone a unified, easy-to-update package setup.
+          </li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      Lukasz Granica's Homepage
+    </footer>
+  </body>
+</html>
