@@ -58,7 +58,26 @@
     }
 }
 
- 
+.navigation__dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 200px;
+  background: var(--navBackground);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navigation__dropdown:hover > .navigation__dropdown-content {
+  display: block;
+}
+
+.navigation__dropdown-toggle:after {
+  content: '▶';
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
 .switch {
   position: absolute;
   display: inline-block;
